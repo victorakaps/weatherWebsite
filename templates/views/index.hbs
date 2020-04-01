@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather</title>
+    <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #f7f7f7;
+}
+header h1{
+    color:white;
+    font-size: 320%;
+    text-align: center;
+}
+
+header{
+    padding-top: 40px;
+    padding-bottom: 27px;
+}
+
+.search-city{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+input[type=text] {
+    width: 41%;
+    padding: 9px 17px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.card{
+    background-color:rgba(0, 0, 0, 0.34);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 910px;
+    height: 470px;
+    margin: auto;
+    border-radius: 30px 30px 30px 30px;
+    padding-bottom: 20px;
+}
+
+#messageOne{
+    font-size: 300%;
+    text-align: center;
+    padding-top: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#messageTwo{
+    font-size: 600%;
+    text-align: center;
+    font-weight: 900;
+    color: rgba(255, 215, 1, 0.59);
+    
+
+}
+#messageThree{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#icon1{
+    margin: auto;
+    display: block;
+}
+
+.date{
+    font-size: 200%;
+    text-align: center;
+    padding-top: 32px;
+    font-family: Tahoma;
+}
+
+.day{
+    font-size: 200%;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 41px;
+    font-family: Tahoma;
+}
+input[type=text] {
+    width: 910px;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    border: 0px solid;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.34);
+    opacity: 60%;
+}
+    </style>
+</head>
+<header>
+</header>
+<body background="./img/420.jpg">
+    <div class="search-city">
+        <form>
+            <input type="text" placeholder="Enter City Name" class="input">
+        </form>
+    </div>
+    <div class="card">
+        <h2 id="messageOne">Shahbad</h2><br>
+        <h3 id="messageThree"></h3>
+        <h1 id='messageTwo'>23&degC</h1>
+        <canvas id="icon1" width="91" height="91"></canvas>
+        <h3 class="date">Date</h3>
+        <h3 class="day">Day</h3>
+    </div>
+    <script type>
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var months = new Array(12);
+    months[0] = "January";
+    months[1] = "Februrary";
+    months[2] = "March";
+    months[3] = "April";
+    months[4] = "May";
+    months[5] = "June";
+    months[6] = "July";
+    months[7] = "August";
+    months[8] = "September";
+    months[9] = "October";
+    months[10] = "November";
+    months[11] = "Decmber";
+    var n = weekday[d.getDay()];
+    const msg1 = document.querySelector(".date");
+    const msg2 = document.querySelector(".day");
+    var x = months[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear();
+    msg1.textContent = x;
+    msg2.textContent = n;
+    
+    </script>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
