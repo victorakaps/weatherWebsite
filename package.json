@@ -1,16 +1,25 @@
 {
-  "name": "web-server",
+  "name": "weather",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorakaps/weather_better_frontend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "hbs": "^4.1.0"
-  }
+  "bugs": {
+    "url": "https://github.com/victorakaps/weather_better_frontend/issues"
+  },
+  "homepage": "https://github.com/victorakaps/weather_better_frontend#readme"
 }
